@@ -51,7 +51,7 @@ module Russian
     #
     # Возвращает строку, в которой все буквы русского алфавита заменены на похожую по звучанию латиницу
     def transliterate(str)
-      chars = str.scan(%r{#{MULTI_KEYS.join '|'}|\w|.})
+      chars = str.scan(%r{#{MULTI_KEYS.join '|'}|\w|.}m)
 
       result = ""
 
